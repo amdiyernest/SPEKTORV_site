@@ -1,13 +1,15 @@
 ---
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import '../styles/variables.css';
+import '../styles/base.css';
+import '../styles/components.css';
 
 interface Props {
   title: string;
   description: string;
   ogImage?: string;
   canonical?: string;
-  pageCSS: string;
   activePage: 'home' | 'catalog' | 'about' | 'reviews';
   darkInitial?: boolean;
 }
@@ -17,7 +19,6 @@ const {
   description,
   ogImage = '',
   canonical = Astro.url.href,
-  pageCSS,
   activePage,
   darkInitial = false,
 } = Astro.props;
@@ -51,13 +52,6 @@ const {
       rel="stylesheet"
     />
 
-    <!-- CSS: global cascade -->
-    <link rel="stylesheet" href="/styles/variables.css" />
-    <link rel="stylesheet" href="/styles/base.css" />
-    <link rel="stylesheet" href="/styles/components.css" />
-    <!-- Page-specific CSS -->
-    <link rel="stylesheet" href={`/styles/pages/${pageCSS}`} />
-
     <!-- TODO: Яндекс.Метрика -->
 
     <slot name="head" />
@@ -66,6 +60,6 @@ const {
     <Nav activePage={activePage} darkInitial={darkInitial} />
     <slot />
     <Footer />
-    <script src="/scripts/nav.js" is:inline defer></script>
+    <script src="../scripts/nav.js"></script>
   </body>
 </html>

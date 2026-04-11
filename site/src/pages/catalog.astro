@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/pages/catalog.css';
 ---
 <BaseLayout
   title="Каталог украшений — SPEKTOR_V"
   description="Более 300 украшений из полимерной глины: серьги, подвески, кольца, броши. Купить на Ozon, Wildberries, Яндекс.Маркет."
-  pageCSS="catalog.css"
   activePage="catalog"
   darkInitial={false}
 >
@@ -375,5 +375,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <script src="/scripts/filters.js" is:inline></script>
+  <script src="../scripts/filters.js"></script>
 </BaseLayout>

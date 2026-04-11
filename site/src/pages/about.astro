@@ -1,30 +1,13 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Философия бренда — SPEKTOR_V</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages/about.css">
-</head>
-<body>
-
-  <!-- ═══ NAV ═══ -->
-  <nav class="nav nav--dark" id="mainNav">
-    <div class="nav-left">
-      <a href="index.html" class="nav-link">Главная</a>
-      <a href="catalog.html" class="nav-link">Каталог</a>
-      <a href="about.html" class="nav-link active">Философия бренда</a>
-      <a href="reviews.html" class="nav-link">Отзывы</a>
-    </div>
-    <a href="#contact" class="btn-contact">Связаться</a>
-  </nav>
-
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/pages/about.css';
+---
+<BaseLayout
+  title="История бренда — SPEKTOR_V"
+  description="История Виктории Спектор: от мастер-классов в 2018 до 300+ украшений ручной работы и 2000 продаж."
+  activePage="about"
+  darkInitial={true}
+>
   <!-- ═══ HERO ═══ -->
   <section class="about-hero" id="aboutHero">
     <div class="about-hero-eyebrow">Философия бренда</div>
@@ -179,7 +162,7 @@
     <h2 class="about-cta-title">Стать частью <em>этой истории</em></h2>
     <p class="about-cta-subtitle">Выберите украшение, которое расскажет вашу историю</p>
     <div class="cta-buttons">
-      <a href="catalog.html" class="btn-primary">Перейти в каталог →</a>
+      <a href="/catalog" class="btn-primary">Перейти в каталог →</a>
       <a href="#" class="btn-secondary">Написать в Telegram →</a>
     </div>
     <div class="cta-socials">
@@ -188,54 +171,4 @@
       <a href="#" class="cta-social">Яндекс.Маркет</a>
     </div>
   </section>
-
-  <!-- ═══ FOOTER ═══ -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <div class="footer-col-title">Навигация</div>
-          <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="about.html">Философия бренда</a></li>
-            <li><a href="reviews.html">Отзывы</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Маркетплейсы</div>
-          <ul>
-            <li><a href="#">Ozon</a></li>
-            <li><a href="#">Wildberries</a></li>
-            <li><a href="#">Яндекс.Маркет</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Связаться</div>
-          <ul>
-            <li><a href="#">Telegram</a></li>
-            <li><a href="#">VK</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Документы</div>
-          <ul>
-            <li><a href="#">Политика конфиденциальности</a></li>
-            <li><a href="#">Публичная оферта</a></li>
-            <li><a href="#">Реквизиты</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="footer-copy">&copy; 2026 SPEKTOR_V</div>
-        <div class="footer-legal">
-          <a href="#">Политика конфиденциальности</a>
-          <a href="#">Оферта</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/nav.js"></script>
-</body>
-</html>
+</BaseLayout>
