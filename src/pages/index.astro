@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="SPEKTOR_V — украшения ручной работы из полимерной глины"
+  description="Серьги, подвески и броши ручной работы. Более 2000 украшений продано по всей России. Вдохновение рождается в лесу."
+  pageCSS="home.css"
+  activePage="home"
+  darkInitial={true}
+>
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SPEKTOR_V",
+    "description": "Украшения ручной работы из полимерной глины",
+    "url": "TODO: реальный домен",
+    "sameAs": ["TODO: Ozon", "TODO: Wildberries", "TODO: Telegram", "TODO: VK"]
+  }
+  </script>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Украшения ручной работы</div>
+      <h1 class="hero-title">SPEKTOR_V</h1>
+      <p class="hero-subtitle">Украшения, рождённые в лесу</p>
+    </div>
+    <div class="hero-image-wrap">
+      <div class="hero-image">
+        <span class="hero-image-placeholder">Фото украшения на мхе</span>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══ STORY / POSITIONING ═══ -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="story">
+        <div class="story-image">
+          <span class="story-image-placeholder">Фото Виктории</span>
+          <div class="story-badge">
+            <div class="story-badge-num">2018</div>
+            <div class="story-badge-label">С нами с</div>
+          </div>
+        </div>
+        <div class="story-text">
+          <h2>Каждое украшение<br><em>лепится вручную</em></h2>
+          <p>Серьги-черника, подвески-малина, кольца из мха — <strong>более 2000 украшений</strong> нашли своих хозяек по всей России.</p>
+          <p>Вдохновение рождается в лесу. Каждая деталь — от текстуры листика до оттенка ягоды — создаётся с любовью к природе.</p>
+          <a href="/about" class="text-link">Узнать историю →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TOP PRODUCTS ═══ -->
+  <section class="section section--gray" id="catalog">
+    <div class="container">
+      <div class="section-eyebrow">Каталог</div>
+      <h2 class="section-title">Полюбились<br><em>больше всего</em></h2>
+      <p class="section-subtitle">Лучшие украшения по мнению наших покупателей. Каждое — ручная работа.</p>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-photo">
+            <span class="product-photo-placeholder">Фото черники</span>
+            <div class="product-dots">
+              <div class="product-dot active"></div>
+              <div class="product-dot"></div>
+              <div class="product-dot"></div>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Серьги «Черника»</div>
+            <div class="product-desc">Ягоды черники с листиком</div>
+            <div class="product-rating">
+              <span class="product-stars" role="img" aria-label="Рейтинг 4.9 из 5">★★★★★</span>
+              <span class="product-rating-num">4.9</span>
+              <span class="product-rating-count">(42)</span>
+            </div>
+            <div class="product-bottom">
+              <div class="product-price">490 ₽ <span class="product-price-old">650 ₽</span></div>
+              <a href="#" class="btn-buy">Купить</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-photo">
+            <span class="product-photo-placeholder">Фото малины</span>
+            <div class="product-dots">
+              <div class="product-dot active"></div>
+              <div class="product-dot"></div>
+              <div class="product-dot"></div>
+              <div class="product-dot"></div>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Подвеска «Малина»</div>
+            <div class="product-desc">На шариковой цепочке</div>
+            <div class="product-rating">
+              <span class="product-stars" role="img" aria-label="Рейтинг 5.0 из 5">★★★★★</span>
+              <span class="product-rating-num">5.0</span>
+              <span class="product-rating-count">(28)</span>
+            </div>
+            <div class="product-bottom">
+              <div class="product-price">590 ₽</div>
+              <a href="#" class="btn-buy">Купить</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-photo">
+            <span class="product-photo-placeholder">Фото морошки</span>
+            <div class="product-dots">
+              <div class="product-dot active"></div>
+              <div class="product-dot"></div>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Подвеска «Морошка»</div>
+            <div class="product-desc">Оранжево-красная ягода</div>
+            <div class="product-rating">
+              <span class="product-stars" role="img" aria-label="Рейтинг 4.8 из 5">★★★★★</span>
+              <span class="product-rating-num">4.8</span>
+              <span class="product-rating-count">(19)</span>
+            </div>
+            <div class="product-bottom">
+              <div class="product-price">550 ₽</div>
+              <a href="#" class="btn-buy">Купить</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-photo">
+            <span class="product-photo-placeholder">Фото мухомора</span>
+            <div class="product-dots">
+              <div class="product-dot active"></div>
+              <div class="product-dot"></div>
+              <div class="product-dot"></div>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Брошь «Мухомор»</div>
+            <div class="product-desc">Миниатюрный мухомор</div>
+            <div class="product-rating">
+              <span class="product-stars" role="img" aria-label="Рейтинг 4.7 из 5">★★★★☆</span>
+              <span class="product-rating-num">4.7</span>
+              <span class="product-rating-count">(35)</span>
+            </div>
+            <div class="product-bottom">
+              <div class="product-price">420 ₽</div>
+              <a href="#" class="btn-buy">Купить</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="products-more">
+        <a href="/catalog" class="btn-secondary">Смотреть весь каталог →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ REVIEWS ═══ -->
+  <section class="section section--black" id="reviews">
+    <div class="container">
+      <div class="section-eyebrow">Отзывы</div>
+      <h2 class="section-title">Они уже носят<br><em>лес</em></h2>
+
+      <div class="reviews-stats">
+        <div class="stat">
+          <div class="stat-number">2000+</div>
+          <div class="stat-label">продано</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">4.9</div>
+          <div class="stat-label">рейтинг</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">300+</div>
+          <div class="stat-label">артикулов</div>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars" role="img" aria-label="Рейтинг 5 из 5">★★★★★</div>
+          <div class="review-text">«Серёжки-черника просто невероятные! Такое ощущение, что это настоящие ягоды. Все подруги спрашивают где взяла.»</div>
+          <div class="review-author">
+            <div class="review-avatar">А</div>
+            <div>
+              <div class="review-name">Анастасия</div>
+              <div class="review-source">Ozon</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars" role="img" aria-label="Рейтинг 5 из 5">★★★★★</div>
+          <div class="review-text">«Подвеска малина — шедевр! Качество отличное, цвет насыщенный, цепочка крепкая. Буду заказывать ещё!»</div>
+          <div class="review-author">
+            <div class="review-avatar">М</div>
+            <div>
+              <div class="review-name">Мария</div>
+              <div class="review-source">Wildberries</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars" role="img" aria-label="Рейтинг 5 из 5">★★★★★</div>
+          <div class="review-text">«Уже третий заказ. Каждое украшение — маленький шедевр. Упаковка тоже очень милая, как подарок себе.»</div>
+          <div class="review-author">
+            <div class="review-avatar">Е</div>
+            <div>
+              <div class="review-name">Екатерина</div>
+              <div class="review-source">Яндекс.Маркет</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA — CONTACT ═══ -->
+  <section class="cta-section" id="contact">
+    <h2 class="cta-title">Чтобы заказать,<br><em>напишите нам</em></h2>
+    <p class="cta-subtitle">Ответим в течение часа</p>
+    <div class="cta-buttons">
+      <a href="#" class="btn-primary">Написать в Telegram →</a>
+      <a href="#" class="btn-secondary">Написать в VK →</a>
+    </div>
+    <div class="cta-socials">
+      <a href="#" class="cta-social">Ozon</a>
+      <a href="#" class="cta-social">Wildberries</a>
+      <a href="#" class="cta-social">Яндекс.Маркет</a>
+    </div>
+  </section>
+</BaseLayout>

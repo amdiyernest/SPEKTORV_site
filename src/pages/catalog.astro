@@ -1,0 +1,379 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Каталог украшений — SPEKTOR_V"
+  description="Более 300 украшений из полимерной глины: серьги, подвески, кольца, броши. Купить на Ozon, Wildberries, Яндекс.Маркет."
+  pageCSS="catalog.css"
+  activePage="catalog"
+  darkInitial={false}
+>
+  <!-- ═══ PAGE HEADER ═══ -->
+  <div class="page-header">
+    <div class="page-header-eyebrow">Каталог украшений</div>
+    <h1 class="page-header-title">Выберите <em>своё</em></h1>
+    <p class="page-header-subtitle">Более 300 украшений ручной работы. Каждое — уникальное, как лесная ягода.</p>
+  </div>
+
+  <!-- ═══ FILTERS ═══ -->
+  <div class="filters-bar">
+    <div class="filters-inner">
+      <button class="filter-chip active" data-filter-group="category">Все</button>
+      <button class="filter-chip" data-filter-group="category">Серьги</button>
+      <button class="filter-chip" data-filter-group="category">Подвески</button>
+      <button class="filter-chip" data-filter-group="category">Кольца</button>
+      <button class="filter-chip" data-filter-group="category">Броши</button>
+      <button class="filter-chip" data-filter-group="category">Наборы</button>
+      <button class="filter-chip" data-filter-group="category">Хиты</button>
+      <button class="filter-chip" data-filter-group="category">Новинки</button>
+      <input type="text" class="filter-search" placeholder="Поиск по названию...">
+    </div>
+  </div>
+
+  <!-- ═══ CATALOG GRID ═══ -->
+  <section class="catalog-section">
+    <div class="catalog-container">
+      <div class="catalog-count">Найдено: 24 товара</div>
+
+      <div class="catalog-grid">
+
+        <!-- Card 1 — Sale -->
+        <div class="ozon-card">
+          <div class="ozon-card-img">
+            <span class="ozon-card-img-placeholder">Фото черники</span>
+            <span class="ozon-card-badge badge-sale">−25%</span>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
+            <div class="ozon-card-dots">
+              <div class="ozon-dot active"></div><div class="ozon-dot"></div><div class="ozon-dot"></div>
+            </div>
+          </div>
+          <div class="ozon-card-body">
+            <div class="ozon-card-price-row">
+              <span class="ozon-card-price">490 ₽</span>
+              <span class="ozon-card-price-old">650 ₽</span>
+            </div>
+            <div class="ozon-card-title">Серьги «Черника» — ягоды с листиком, полимерная глина</div>
+            <div class="ozon-card-rating">
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.9 из 5">★★★★★</span>
+              <span class="ozon-rating-num">4.9</span>
+              <span class="ozon-rating-count">· 42 отзыва</span>
+            </div>
+            <div class="ozon-card-actions">
+              <a href="#" class="ozon-btn-buy ozon-btn-primary">Купить</a>
+              <a href="#" class="ozon-btn-buy ozon-btn-tg">Задать вопрос в Telegram</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 — Hit -->
+        <div class="ozon-card">
+          <div class="ozon-card-img">
+            <span class="ozon-card-img-placeholder">Фото малины</span>
+            <span class="ozon-card-badge badge-hit">Хит</span>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
+            <div class="ozon-card-dots">
+              <div class="ozon-dot active"></div><div class="ozon-dot"></div><div class="ozon-dot"></div><div class="ozon-dot"></div>
+            </div>
+          </div>
+          <div class="ozon-card-body">
+            <div class="ozon-card-price-row">
+              <span class="ozon-card-price">590 ₽</span>
+            </div>
+            <div class="ozon-card-title">Подвеска «Малина» на шариковой цепочке</div>
+            <div class="ozon-card-rating">
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 5.0 из 5">★★★★★</span>
+              <span class="ozon-rating-num">5.0</span>
+              <span class="ozon-rating-count">· 28 отзывов</span>
+            </div>
+            <div class="ozon-card-actions">
+              <a href="#" class="ozon-btn-buy ozon-btn-primary">Купить</a>
+              <a href="#" class="ozon-btn-buy ozon-btn-tg">Задать вопрос в Telegram</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 — New -->
+        <div class="ozon-card">
+          <div class="ozon-card-img">
+            <span class="ozon-card-img-placeholder">Фото морошки</span>
+            <span class="ozon-card-badge badge-new">New</span>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
+            <div class="ozon-card-dots">
+              <div class="ozon-dot active"></div><div class="ozon-dot"></div>
+            </div>
+          </div>
+          <div class="ozon-card-body">
+            <div class="ozon-card-price-row">
+              <span class="ozon-card-price">550 ₽</span>
+            </div>
+            <div class="ozon-card-title">Подвеска «Морошка» — оранжево-красная ягода</div>
+            <div class="ozon-card-rating">
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.8 из 5">★★★★★</span>
+              <span class="ozon-rating-num">4.8</span>
+              <span class="ozon-rating-count">· 19 отзывов</span>
+            </div>
+            <div class="ozon-card-actions">
+              <a href="#" class="ozon-btn-buy ozon-btn-primary">Купить</a>
+              <a href="#" class="ozon-btn-buy ozon-btn-tg">Задать вопрос в Telegram</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="ozon-card">
+          <div class="ozon-card-img">
+            <span class="ozon-card-img-placeholder">Фото мухомора</span>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
+            <div class="ozon-card-dots">
+              <div class="ozon-dot active"></div><div class="ozon-dot"></div><div class="ozon-dot"></div>
+            </div>
+          </div>
+          <div class="ozon-card-body">
+            <div class="ozon-card-price-row">
+              <span class="ozon-card-price">420 ₽</span>
+            </div>
+            <div class="ozon-card-title">Брошь «Мухомор» — миниатюрная, полимерная глина</div>
+            <div class="ozon-card-rating">
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.7 из 5">★★★★☆</span>
+              <span class="ozon-rating-num">4.7</span>
+              <span class="ozon-rating-count">· 35 отзывов</span>
+            </div>
+            <div class="ozon-card-actions">
+              <a href="#" class="ozon-btn-buy ozon-btn-primary">Купить</a>
+              <a href="#" class="ozon-btn-buy ozon-btn-tg">Задать вопрос в Telegram</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 — Sale -->
+        <div class="ozon-card">
+          <div class="ozon-card-img">
+            <span class="ozon-card-img-placeholder">Фото клубники</span>
+            <span class="ozon-card-badge badge-sale">−15%</span>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
+            <div class="ozon-card-dots">
+              <div class="ozon-dot active"></div><div class="ozon-dot"></div><div class="ozon-dot"></div>
+            </div>
+          </div>
+          <div class="ozon-card-body">
+            <div class="ozon-card-price-row">
+              <span class="ozon-card-price">510 ₽</span>
+              <span class="ozon-card-price-old">600 ₽</span>
+            </div>
+            <div class="ozon-card-title">Серьги «Клубника» — спелые ягоды с цветочком</div>
+            <div class="ozon-card-rating">
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.9 из 5">★★★★★</span>
+              <span class="ozon-rating-num">4.9</span>
+              <span class="ozon-rating-count">· 31 отзыв</span>
+            </div>
+            <div class="ozon-card-actions">
+              <a href="#" class="ozon-btn-buy ozon-btn-primary">Купить</a>
+              <a href="#" class="ozon-btn-buy ozon-btn-tg">Задать вопрос в Telegram</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 — Hit -->
+        <div class="ozon-card">
+          <div class="ozon-card-img">
+            <span class="ozon-card-img-placeholder">Фото лисичек</span>
+            <span class="ozon-card-badge badge-hit">Хит</span>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
+            <div class="ozon-card-dots">
+              <div class="ozon-dot active"></div><div class="ozon-dot"></div>
+            </div>
+          </div>
+          <div class="ozon-card-body">
+            <div class="ozon-card-price-row">
+              <span class="ozon-card-price">680 ₽</span>
+            </div>
+            <div class="ozon-card-title">Серьги «Лисички» — грибы на крючках из хирургической стали</div>
+            <div class="ozon-card-rating">
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 5.0 из 5">★★★★★</span>
+              <span class="ozon-rating-num">5.0</span>
+              <span class="ozon-rating-count">· 56 отзывов</span>
+            </div>
+            <div class="ozon-card-actions">
+              <a href="#" class="ozon-btn-buy ozon-btn-primary">Купить</a>
+              <a href="#" class="ozon-btn-buy ozon-btn-tg">Задать вопрос в Telegram</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="ozon-card">
+          <div class="ozon-card-img">
+            <span class="ozon-card-img-placeholder">Фото ландыша</span>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
+            <div class="ozon-card-dots">
+              <div class="ozon-dot active"></div><div class="ozon-dot"></div><div class="ozon-dot"></div>
+            </div>
+          </div>
+          <div class="ozon-card-body">
+            <div class="ozon-card-price-row">
+              <span class="ozon-card-price">620 ₽</span>
+            </div>
+            <div class="ozon-card-title">Подвеска «Ландыш» — веточка с колокольчиками</div>
+            <div class="ozon-card-rating">
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.8 из 5">★★★★★</span>
+              <span class="ozon-rating-num">4.8</span>
+              <span class="ozon-rating-count">· 14 отзывов</span>
+            </div>
+            <div class="ozon-card-actions">
+              <a href="#" class="ozon-btn-buy ozon-btn-primary">Купить</a>
+              <a href="#" class="ozon-btn-buy ozon-btn-tg">Задать вопрос в Telegram</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 — New + Sale -->
+        <div class="ozon-card">
+          <div class="ozon-card-img">
+            <span class="ozon-card-img-placeholder">Фото набора</span>
+            <span class="ozon-card-badge badge-new">New</span>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
+            <div class="ozon-card-dots">
+              <div class="ozon-dot active"></div><div class="ozon-dot"></div><div class="ozon-dot"></div><div class="ozon-dot"></div><div class="ozon-dot"></div>
+            </div>
+          </div>
+          <div class="ozon-card-body">
+            <div class="ozon-card-price-row">
+              <span class="ozon-card-price">1 290 ₽</span>
+              <span class="ozon-card-price-old">1 540 ₽</span>
+            </div>
+            <div class="ozon-card-title">Набор «Лесная поляна» — серьги + подвеска + кольцо</div>
+            <div class="ozon-card-rating">
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 5.0 из 5">★★★★★</span>
+              <span class="ozon-rating-num">5.0</span>
+              <span class="ozon-rating-count">· 8 отзывов</span>
+            </div>
+            <div class="ozon-card-actions">
+              <a href="#" class="ozon-btn-buy ozon-btn-primary">Купить</a>
+              <a href="#" class="ozon-btn-buy ozon-btn-tg">Задать вопрос в Telegram</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="ozon-card">
+          <div class="ozon-card-img">
+            <span class="ozon-card-img-placeholder">Фото подсолнуха</span>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
+            <div class="ozon-card-dots">
+              <div class="ozon-dot active"></div><div class="ozon-dot"></div>
+            </div>
+          </div>
+          <div class="ozon-card-body">
+            <div class="ozon-card-price-row">
+              <span class="ozon-card-price">470 ₽</span>
+            </div>
+            <div class="ozon-card-title">Серьги «Подсолнух» — яркие, летние, лёгкие</div>
+            <div class="ozon-card-rating">
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.9 из 5">★★★★★</span>
+              <span class="ozon-rating-num">4.9</span>
+              <span class="ozon-rating-count">· 22 отзыва</span>
+            </div>
+            <div class="ozon-card-actions">
+              <a href="#" class="ozon-btn-buy ozon-btn-primary">Купить</a>
+              <a href="#" class="ozon-btn-buy ozon-btn-tg">Задать вопрос в Telegram</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 10 — Sale -->
+        <div class="ozon-card">
+          <div class="ozon-card-img">
+            <span class="ozon-card-img-placeholder">Фото ромашки</span>
+            <span class="ozon-card-badge badge-sale">−20%</span>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
+            <div class="ozon-card-dots">
+              <div class="ozon-dot active"></div><div class="ozon-dot"></div><div class="ozon-dot"></div>
+            </div>
+          </div>
+          <div class="ozon-card-body">
+            <div class="ozon-card-price-row">
+              <span class="ozon-card-price">400 ₽</span>
+              <span class="ozon-card-price-old">500 ₽</span>
+            </div>
+            <div class="ozon-card-title">Кольцо «Ромашка» — нежный полевой цветок</div>
+            <div class="ozon-card-rating">
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.8 из 5">★★★★★</span>
+              <span class="ozon-rating-num">4.8</span>
+              <span class="ozon-rating-count">· 17 отзывов</span>
+            </div>
+            <div class="ozon-card-actions">
+              <a href="#" class="ozon-btn-buy ozon-btn-primary">Купить</a>
+              <a href="#" class="ozon-btn-buy ozon-btn-tg">Задать вопрос в Telegram</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="ozon-card">
+          <div class="ozon-card-img">
+            <span class="ozon-card-img-placeholder">Фото брусники</span>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
+            <div class="ozon-card-dots">
+              <div class="ozon-dot active"></div><div class="ozon-dot"></div>
+            </div>
+          </div>
+          <div class="ozon-card-body">
+            <div class="ozon-card-price-row">
+              <span class="ozon-card-price">530 ₽</span>
+            </div>
+            <div class="ozon-card-title">Серьги «Брусника» — россыпь красных ягод</div>
+            <div class="ozon-card-rating">
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.9 из 5">★★★★★</span>
+              <span class="ozon-rating-num">4.9</span>
+              <span class="ozon-rating-count">· 26 отзывов</span>
+            </div>
+            <div class="ozon-card-actions">
+              <a href="#" class="ozon-btn-buy ozon-btn-primary">Купить</a>
+              <a href="#" class="ozon-btn-buy ozon-btn-tg">Задать вопрос в Telegram</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 12 — Hit -->
+        <div class="ozon-card">
+          <div class="ozon-card-img">
+            <span class="ozon-card-img-placeholder">Фото белого гриба</span>
+            <span class="ozon-card-badge badge-hit">Хит</span>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
+            <div class="ozon-card-dots">
+              <div class="ozon-dot active"></div><div class="ozon-dot"></div><div class="ozon-dot"></div>
+            </div>
+          </div>
+          <div class="ozon-card-body">
+            <div class="ozon-card-price-row">
+              <span class="ozon-card-price">450 ₽</span>
+            </div>
+            <div class="ozon-card-title">Брошь «Белый гриб» — миниатюрный боровик</div>
+            <div class="ozon-card-rating">
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.9 из 5">★★★★★</span>
+              <span class="ozon-rating-num">4.9</span>
+              <span class="ozon-rating-count">· 41 отзыв</span>
+            </div>
+            <div class="ozon-card-actions">
+              <a href="#" class="ozon-btn-buy ozon-btn-primary">Купить</a>
+              <a href="#" class="ozon-btn-buy ozon-btn-tg">Задать вопрос в Telegram</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="cta-section" id="contact">
+    <h2 class="cta-title">Не нашли нужное?<br><em>Напишите нам</em></h2>
+    <p class="cta-subtitle">Поможем выбрать украшение или сделаем на заказ</p>
+    <div class="cta-buttons">
+      <a href="#" class="btn-primary">Написать в Telegram →</a>
+      <a href="#" class="btn-secondary">Написать в VK →</a>
+    </div>
+  </section>
+
+  <script src="/scripts/filters.js"></script>
+</BaseLayout>
