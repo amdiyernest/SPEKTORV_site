@@ -4,13 +4,14 @@ interface Props {
   darkInitial?: boolean;
 }
 const { activePage, darkInitial = false } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <nav class={`nav${darkInitial ? ' nav--dark' : ''}`} id="mainNav">
   <div class="nav-left">
-    <a href="/" class={`nav-link${activePage === 'home' ? ' active' : ''}`}>Главная</a>
-    <a href="/catalog" class={`nav-link${activePage === 'catalog' ? ' active' : ''}`}>Каталог</a>
-    <a href="/about" class={`nav-link${activePage === 'about' ? ' active' : ''}`}>Философия бренда</a>
-    <a href="/reviews" class={`nav-link${activePage === 'reviews' ? ' active' : ''}`}>Отзывы</a>
+    <a href={`${base}/`} class={`nav-link${activePage === 'home' ? ' active' : ''}`}>Главная</a>
+    <a href={`${base}/catalog`} class={`nav-link${activePage === 'catalog' ? ' active' : ''}`}>Каталог</a>
+    <a href={`${base}/about`} class={`nav-link${activePage === 'about' ? ' active' : ''}`}>Философия бренда</a>
+    <a href={`${base}/reviews`} class={`nav-link${activePage === 'reviews' ? ' active' : ''}`}>Отзывы</a>
   </div>
   <a href="#contact" class="btn-contact">Связаться</a>
 </nav>
