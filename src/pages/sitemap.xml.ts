@@ -10,7 +10,7 @@ const pages = [
 const lastmod = new Date().toISOString().split('T')[0];
 
 export const GET: APIRoute = ({ site }) => {
-  const baseUrl = site ? site.toString().replace(/\/$/, '') : 'TODO: реальный домен';
+  const baseUrl = site ? site.toString().replace(/\/$/, '') : 'https://spektor-v.ru';
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
