@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отзывы — SPEKTOR_V</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/reviews.css">
+</head>
+<body>
+
+  <!-- ═══ NAV ═══ -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-left">
+      <a href="index.html" class="nav-link">Главная</a>
+      <a href="catalog.html" class="nav-link">Каталог</a>
+      <a href="about.html" class="nav-link">Философия бренда</a>
+      <a href="reviews.html" class="nav-link active">Отзывы</a>
+    </div>
+    <a href="#contact" class="btn-contact">Связаться</a>
+  </nav>
+
+  <!-- ═══ PAGE HEADER ═══ -->
+  <div class="page-header">
+    <div class="page-header-eyebrow">Отзывы покупателей</div>
+    <h1 class="page-header-title">Они уже носят <em>лес</em></h1>
+    <p class="page-header-subtitle">Честные отзывы с Ozon, Wildberries и Яндекс.Маркет — от тех, кто уже выбрал SPEKTOR_V</p>
+  </div>
+
+  <!-- ═══ STATS ═══ -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat">
+        <div class="stat-number">2000+</div>
+        <div class="stat-label">продано украшений</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">4.9</div>
+        <div class="stat-label">средний рейтинг</div>
+        <div class="stat-sub">на всех маркетплейсах</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">350+</div>
+        <div class="stat-label">отзывов</div>
+        <div class="stat-sub">Ozon + WB + Яндекс.Маркет</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">рекомендуют</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FILTER TABS ═══ -->
+  <div class="filter-tabs">
+    <button class="filter-tab active">Все отзывы</button>
+    <button class="filter-tab">Ozon</button>
+    <button class="filter-tab">Wildberries</button>
+    <button class="filter-tab">Яндекс.Маркет</button>
+    <button class="filter-tab">С фото</button>
+    <button class="filter-tab">С видео</button>
+  </div>
+
+  <!-- ═══ VIDEO REVIEWS ═══ -->
+  <section class="video-section">
+    <div class="video-section-inner">
+      <h2 class="video-section-title">Видео-отзывы и распаковки</h2>
+      <p class="video-section-subtitle">Настоящие эмоции от настоящих покупательниц</p>
+
+      <div class="video-carousel-wrap">
+        <div class="video-carousel" id="videoCarousel">
+          <div class="video-card">
+            <div class="video-thumb">
+              <span>Видео распаковки</span>
+              <div class="video-play-btn"></div>
+            </div>
+            <div class="video-info">
+              <div class="video-author">Анна</div>
+              <div class="video-type">Распаковка · Ozon</div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="video-thumb">
+              <span>Видео-отзыв</span>
+              <div class="video-play-btn"></div>
+            </div>
+            <div class="video-info">
+              <div class="video-author">Дарья</div>
+              <div class="video-type">Видео-отзыв · VK</div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="video-thumb">
+              <span>Обзор набора</span>
+              <div class="video-play-btn"></div>
+            </div>
+            <div class="video-info">
+              <div class="video-author">Кристина</div>
+              <div class="video-type">Обзор · Wildberries</div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="video-thumb">
+              <span>Распаковка подарка</span>
+              <div class="video-play-btn"></div>
+            </div>
+            <div class="video-info">
+              <div class="video-author">Елена</div>
+              <div class="video-type">Распаковка · Ozon</div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="video-thumb">
+              <span>Видео-отзыв</span>
+              <div class="video-play-btn"></div>
+            </div>
+            <div class="video-info">
+              <div class="video-author">Полина</div>
+              <div class="video-type">Видео-отзыв · VK</div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-btn" onclick="scrollCarousel('videoCarousel', -300)">←</button>
+          <button class="carousel-btn" onclick="scrollCarousel('videoCarousel', 300)">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ REVIEW STORIES (PHOTO CARDS CAROUSEL) ═══ -->
+  <section class="reviews-section">
+    <div class="reviews-inner">
+      <h2 class="reviews-section-title">Истории покупателей</h2>
+      <p class="reviews-section-subtitle">Фотоотзывы — как украшения живут у новых хозяек</p>
+
+      <div class="review-stories-wrap">
+        <div class="review-stories" id="storiesCarousel">
+
+          <div class="review-story-card">
+            <div class="review-story-photo">
+              <span>Фото: серьги-черника на модели</span>
+              <div class="review-story-source source-ozon">Ozon</div>
+            </div>
+            <div class="review-story-body">
+              <div class="review-story-stars">★★★★★</div>
+              <div class="review-story-text">«Серёжки-черника просто невероятные! Такое ощущение, что это настоящие ягоды. Все подруги спрашивают где взяла — теперь хотят такие же. Очень лёгкие и удобные, ношу каждый день.»</div>
+              <div class="review-story-author-row">
+                <div class="review-story-author">
+                  <div class="review-avatar">А</div>
+                  <div>
+                    <div class="review-name">Анастасия</div>
+                    <div class="review-date">15 декабря 2024</div>
+                  </div>
+                </div>
+                <div class="review-product">Серьги «Черника»</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-story-card">
+            <div class="review-story-photo">
+              <span>Фото: подвеска-малина крупным планом</span>
+              <div class="review-story-source source-wb">WB</div>
+            </div>
+            <div class="review-story-body">
+              <div class="review-story-stars">★★★★★</div>
+              <div class="review-story-text">«Подвеска малина — шедевр! Качество отличное, цвет насыщенный, цепочка крепкая. Буду заказывать ещё! Упаковка тоже порадовала — как настоящий подарок.»</div>
+              <div class="review-story-author-row">
+                <div class="review-story-author">
+                  <div class="review-avatar">М</div>
+                  <div>
+                    <div class="review-name">Мария</div>
+                    <div class="review-date">3 января 2025</div>
+                  </div>
+                </div>
+                <div class="review-product">Подвеска «Малина»</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-story-card">
+            <div class="review-story-photo">
+              <span>Фото: набор «Лесная поляна»</span>
+              <div class="review-story-source source-ozon">Ozon</div>
+            </div>
+            <div class="review-story-body">
+              <div class="review-story-stars">★★★★★</div>
+              <div class="review-story-text">«Уже третий заказ. Каждое украшение — маленький шедевр. Купила набор «Лесная поляна» — серьги, подвеска и кольцо сочетаются идеально. Как будто из сказки.»</div>
+              <div class="review-story-author-row">
+                <div class="review-story-author">
+                  <div class="review-avatar">Е</div>
+                  <div>
+                    <div class="review-name">Екатерина</div>
+                    <div class="review-date">28 декабря 2024</div>
+                  </div>
+                </div>
+                <div class="review-product">Набор «Лесная поляна»</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-story-card">
+            <div class="review-story-photo">
+              <span>Фото: брошь-мухомор на пальто</span>
+              <div class="review-story-source source-ym">Я.М</div>
+            </div>
+            <div class="review-story-body">
+              <div class="review-story-stars">★★★★★</div>
+              <div class="review-story-text">«Брошь мухомор — просто чудо! Прикрепила на берет — теперь это мой любимый аксессуар. Сделана очень аккуратно, каждая точечка прорисована. Спасибо мастеру!»</div>
+              <div class="review-story-author-row">
+                <div class="review-story-author">
+                  <div class="review-avatar">О</div>
+                  <div>
+                    <div class="review-name">Ольга</div>
+                    <div class="review-date">10 ноября 2024</div>
+                  </div>
+                </div>
+                <div class="review-product">Брошь «Мухомор»</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-story-card">
+            <div class="review-story-photo">
+              <span>Фото: серьги-лисички</span>
+              <div class="review-story-source source-wb">WB</div>
+            </div>
+            <div class="review-story-body">
+              <div class="review-story-stars">★★★★★</div>
+              <div class="review-story-text">«Серьги-лисички — это любовь с первого взгляда. Невесомые, яркие, поднимают настроение. Дочка (5 лет) говорит "мама, ты как фея из леса". Лучший комплимент!»</div>
+              <div class="review-story-author-row">
+                <div class="review-story-author">
+                  <div class="review-avatar">Н</div>
+                  <div>
+                    <div class="review-name">Наталья</div>
+                    <div class="review-date">22 января 2025</div>
+                  </div>
+                </div>
+                <div class="review-product">Серьги «Лисички»</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-story-card">
+            <div class="review-story-photo">
+              <span>Фото: подвеска-ландыш</span>
+              <div class="review-story-source source-ozon">Ozon</div>
+            </div>
+            <div class="review-story-body">
+              <div class="review-story-stars">★★★★★</div>
+              <div class="review-story-text">«Подарила маме на 8 марта подвеску «Ландыш». Она была в восторге! Говорит, это самый нежный и душевный подарок. Теперь не снимает. Спасибо за вашу работу!»</div>
+              <div class="review-story-author-row">
+                <div class="review-story-author">
+                  <div class="review-avatar">В</div>
+                  <div>
+                    <div class="review-name">Виктория</div>
+                    <div class="review-date">9 марта 2025</div>
+                  </div>
+                </div>
+                <div class="review-product">Подвеска «Ландыш»</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-btn" onclick="scrollCarousel('storiesCarousel', -370)">←</button>
+          <button class="carousel-btn" onclick="scrollCarousel('storiesCarousel', 370)">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TEXT REVIEWS GRID ═══ -->
+  <section class="text-reviews-section">
+    <div class="text-reviews-inner">
+      <h2 class="text-reviews-title">Ещё больше <em>тёплых слов</em></h2>
+
+      <div class="text-reviews-grid">
+
+        <div class="text-review-card">
+          <div class="text-review-stars">★★★★★</div>
+          <div class="text-review-text">«Заказывала клубнику — пришла идеальная. Лёгкая, цвета натуральные. Ношу на работу — коллеги в восторге, думают настоящая!»</div>
+          <div class="text-review-footer">
+            <div class="text-review-author">
+              <div class="review-avatar">И</div>
+              <div>
+                <div class="review-name">Ирина</div>
+                <div class="review-date">Февраль 2025</div>
+              </div>
+            </div>
+            <span class="text-review-source source-ozon">Ozon</span>
+          </div>
+        </div>
+
+        <div class="text-review-card">
+          <div class="text-review-stars">★★★★★</div>
+          <div class="text-review-text">«Второй заказ за месяц. Первый раз — себе серьги, второй — подруге в подарок. Она визжала от счастья. Качество на высоте!»</div>
+          <div class="text-review-footer">
+            <div class="text-review-author">
+              <div class="review-avatar">С</div>
+              <div>
+                <div class="review-name">Светлана</div>
+                <div class="review-date">Январь 2025</div>
+              </div>
+            </div>
+            <span class="text-review-source source-wb">WB</span>
+          </div>
+        </div>
+
+        <div class="text-review-card">
+          <div class="text-review-stars">★★★★★</div>
+          <div class="text-review-text">«Брошь белый гриб — маленькое произведение искусства. Ношу на шарфе, получаю комплименты каждый день. Муж даже запомнил название бренда.»</div>
+          <div class="text-review-footer">
+            <div class="text-review-author">
+              <div class="review-avatar">Т</div>
+              <div>
+                <div class="review-name">Татьяна</div>
+                <div class="review-date">Декабрь 2024</div>
+              </div>
+            </div>
+            <span class="text-review-source source-ym">Я.М</span>
+          </div>
+        </div>
+
+        <div class="text-review-card">
+          <div class="text-review-stars">★★★★★</div>
+          <div class="text-review-text">«Купила набор: серьги + подвеска. Упаковка как в ювелирном. Муж подумал, что я потратила тысяч пять, а когда узнал цену — сам попросил ещё заказать.»</div>
+          <div class="text-review-footer">
+            <div class="text-review-author">
+              <div class="review-avatar">Л</div>
+              <div>
+                <div class="review-name">Людмила</div>
+                <div class="review-date">Ноябрь 2024</div>
+              </div>
+            </div>
+            <span class="text-review-source source-ozon">Ozon</span>
+          </div>
+        </div>
+
+        <div class="text-review-card">
+          <div class="text-review-stars">★★★★☆</div>
+          <div class="text-review-text">«Серьги морошка — очень красивые и необычные. Единственное — хотелось бы чуть длиннее крючки. Но в целом — шикарно, рекомендую.»</div>
+          <div class="text-review-footer">
+            <div class="text-review-author">
+              <div class="review-avatar">Д</div>
+              <div>
+                <div class="review-name">Дарья</div>
+                <div class="review-date">Октябрь 2024</div>
+              </div>
+            </div>
+            <span class="text-review-source source-wb">WB</span>
+          </div>
+        </div>
+
+        <div class="text-review-card">
+          <div class="text-review-stars">★★★★★</div>
+          <div class="text-review-text">«Подвеска ландыш для мамы — лучший подарок на день рождения. Она плакала от счастья. Спасибо за то, что вкладываете душу в каждое украшение.»</div>
+          <div class="text-review-footer">
+            <div class="text-review-author">
+              <div class="review-avatar">К</div>
+              <div>
+                <div class="review-name">Кристина</div>
+                <div class="review-date">Март 2025</div>
+              </div>
+            </div>
+            <span class="text-review-source source-ym">Я.М</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="cta-section" id="contact">
+    <h2 class="cta-title">Хотите стать <em>частью историй?</em></h2>
+    <p class="cta-subtitle">Выберите своё украшение — и напишите свой отзыв</p>
+    <div class="cta-buttons">
+      <a href="catalog.html" class="btn-primary">Перейти в каталог →</a>
+      <a href="#" class="btn-secondary">Написать в Telegram →</a>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-col-title">Навигация</div>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="about.html">Философия бренда</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Маркетплейсы</div>
+          <ul>
+            <li><a href="#">Ozon</a></li>
+            <li><a href="#">Wildberries</a></li>
+            <li><a href="#">Яндекс.Маркет</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Связаться</div>
+          <ul>
+            <li><a href="#">Telegram</a></li>
+            <li><a href="#">VK</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Документы</div>
+          <ul>
+            <li><a href="#">Политика конфиденциальности</a></li>
+            <li><a href="#">Публичная оферта</a></li>
+            <li><a href="#">Реквизиты</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2026 SPEKTOR_V</div>
+        <div class="footer-legal">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Оферта</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/carousel.js"></script>
+  <script src="js/filters.js"></script>
+</body>
+</html>

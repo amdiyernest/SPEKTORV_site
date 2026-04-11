@@ -1,0 +1,125 @@
+/* ═══════════════════════════════════════════
+   SPEKTOR_V — Home Page
+   ═══════════════════════════════════════════ */
+
+/* ═══ HERO ═══ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--black);
+  overflow: hidden;
+  padding: 56px var(--container-pad) 0;
+}
+
+.hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.hero-eyebrow {
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text-secondary-dark); margin-bottom: 20px;
+}
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 7vw, 80px); font-weight: 700;
+  line-height: 1.05; letter-spacing: -0.02em;
+  color: var(--text-on-dark); margin-bottom: 12px;
+}
+.hero-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(18px, 2.5vw, 24px); font-weight: 400;
+  font-style: italic; color: var(--text-secondary-dark);
+  margin-bottom: 0; letter-spacing: 0.01em;
+}
+
+.hero-image-wrap {
+  position: relative;
+  margin-top: 48px;
+  width: 100%;
+  max-width: 560px;
+}
+.hero-image {
+  width: 100%; aspect-ratio: 4/5;
+  background: #1a1a1a; border-radius: 20px 20px 0 0;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; position: relative;
+}
+.hero-image-placeholder {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px; font-weight: 400;
+  color: var(--text-secondary-dark);
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+
+.hero-scroll {
+  position: absolute; bottom: 32px; left: 50%;
+  transform: translateX(-50%); z-index: 10;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 8px;
+}
+.hero-scroll span {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text-secondary-dark);
+}
+.hero-scroll-line {
+  width: 1px; height: 40px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+  animation: scroll-pulse 2s ease-in-out infinite;
+}
+
+/* ═══ STORY BLOCK ═══ */
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.story-image {
+  aspect-ratio: 4/5; background: var(--gray-bg);
+  border-radius: 20px; display: flex;
+  align-items: center; justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.08);
+  position: relative;
+}
+.story-image-placeholder {
+  font-size: 13px; color: var(--text-tertiary);
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.story-badge {
+  position: absolute; bottom: -16px; right: -16px;
+  background: var(--near-black); color: var(--white);
+  padding: 20px 24px; border-radius: var(--radius-card);
+  text-align: center;
+}
+.story-badge-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px; font-weight: 700; line-height: 1;
+}
+.story-badge-label {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-secondary-dark); margin-top: 4px;
+}
+.story-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 44px); font-weight: 600;
+  line-height: 1.15; margin-bottom: 24px;
+}
+.story-text h2 em { font-weight: 400; font-style: italic; }
+.story-text p {
+  font-size: 16px; font-weight: 300; line-height: 1.8;
+  color: var(--text-secondary); margin-bottom: 16px;
+}
+.story-text p strong { font-weight: 500; color: var(--text-primary); }
+
+@media (max-width: 768px) {
+  .story { grid-template-columns: 1fr; gap: 48px; }
+}

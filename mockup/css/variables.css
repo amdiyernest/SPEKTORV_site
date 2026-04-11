@@ -1,0 +1,59 @@
+/* ═══════════════════════════════════════════
+   SPEKTOR_V — Design Tokens
+   ═══════════════════════════════════════════ */
+
+:root {
+  /* Colors */
+  --black: #000000;
+  --near-black: #1d1d1f;
+  --gray-bg: #f5f5f7;
+  --white: #ffffff;
+
+  /* Text */
+  --text-primary: #1d1d1f;
+  --text-secondary: #86868b;
+  --text-tertiary: #aeaeb2;
+  --text-on-dark: #ffffff;
+  --text-secondary-dark: rgba(255,255,255,0.56);
+
+  /* Borders */
+  --border-light: rgba(0,0,0,0.06);
+  --border-dark: rgba(255,255,255,0.08);
+
+  /* Shadows */
+  --shadow-card: 0 2px 12px rgba(0,0,0,0.06);
+  --shadow-card-hover: 0 12px 40px rgba(0,0,0,0.1);
+
+  /* Radius */
+  --radius-card: 16px;
+  --radius-pill: 50px;
+
+  /* Layout */
+  --content-max: 1200px;
+  --content-narrow: 720px;
+  --section-pad: 120px;
+  --container-pad: 64px;
+
+  /* Marketplace colors */
+  --ozon-blue: #005bff;
+  --wb-pink: #cb11ab;
+  --ym-yellow: #ffcc00;
+  --discount-red: #eb5757;
+  --ozon-green: #00b33c;
+  --star-color: #ff9500;
+}
+
+/* ═══ Responsive overrides ═══ */
+@media (max-width: 1024px) {
+  :root {
+    --container-pad: 48px;
+    --section-pad: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-pad: 24px;
+    --section-pad: 64px;
+  }
+}
