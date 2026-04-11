@@ -1,0 +1,71 @@
+---
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  canonical?: string;
+  pageCSS: string;
+  activePage: 'home' | 'catalog' | 'about' | 'reviews';
+  darkInitial?: boolean;
+}
+
+const {
+  title,
+  description,
+  ogImage = '',
+  canonical = Astro.url.href,
+  pageCSS,
+  activePage,
+  darkInitial = false,
+} = Astro.props;
+---
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="ru_RU" />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+
+    <link rel="canonical" href={canonical} />
+
+    <!-- TODO: favicon -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS: global cascade -->
+    <link rel="stylesheet" href="/styles/variables.css" />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" href="/styles/components.css" />
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href={`/styles/pages/${pageCSS}`} />
+
+    <!-- TODO: Яндекс.Метрика -->
+
+    <slot name="head" />
+  </head>
+  <body>
+    <Nav activePage={activePage} darkInitial={darkInitial} />
+    <slot />
+    <Footer />
+    <script src="/scripts/nav.js" defer></script>
+  </body>
+</html>
