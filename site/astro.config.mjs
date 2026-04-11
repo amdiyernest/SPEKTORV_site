@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://spektor-v.ru', // TODO: заменить на реальный домен
+  site: 'https://amdiyernest.github.io',
+  base: '/SPEKTORV_site',
   output: 'static',
 });
