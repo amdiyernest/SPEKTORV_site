@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: TODO реальный домен/sitemap.xml

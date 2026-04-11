@@ -8,3 +8,4 @@ function scrollCarousel(id, amount) {
     el.scrollBy({ left: amount, behavior: 'smooth' });
   }
 }
+window.scrollCarousel = scrollCarousel;

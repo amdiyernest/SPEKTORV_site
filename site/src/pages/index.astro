@@ -1,29 +1,23 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPEKTOR_V</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages/home.css">
-</head>
-<body>
-
-  <!-- ═══ NAVIGATION ═══ -->
-  <nav class="nav nav--dark" id="mainNav">
-    <div class="nav-left">
-      <a href="index.html" class="nav-link active">Главная</a>
-      <a href="catalog.html" class="nav-link">Каталог</a>
-      <a href="about.html" class="nav-link">Философия бренда</a>
-      <a href="reviews.html" class="nav-link">Отзывы</a>
-    </div>
-    <a href="#contact" class="btn-contact">Связаться</a>
-  </nav>
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/pages/home.css';
+---
+<BaseLayout
+  title="SPEKTOR_V — украшения ручной работы из полимерной глины"
+  description="Серьги, подвески и броши ручной работы. Более 2000 украшений продано по всей России. Вдохновение рождается в лесу."
+  activePage="home"
+  darkInitial={true}
+>
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SPEKTOR_V",
+    "description": "Украшения ручной работы из полимерной глины",
+    "url": "TODO: реальный домен",
+    "sameAs": ["TODO: Ozon", "TODO: Wildberries", "TODO: Telegram", "TODO: VK"]
+  }
+  </script>
 
   <!-- ═══ HERO ═══ -->
   <section class="hero">
@@ -58,7 +52,7 @@
           <h2>Каждое украшение<br><em>лепится вручную</em></h2>
           <p>Серьги-черника, подвески-малина, кольца из мха — <strong>более 2000 украшений</strong> нашли своих хозяек по всей России.</p>
           <p>Вдохновение рождается в лесу. Каждая деталь — от текстуры листика до оттенка ягоды — создаётся с любовью к природе.</p>
-          <a href="about.html" class="text-link">Узнать историю →</a>
+          <a href="/about" class="text-link">Узнать историю →</a>
         </div>
       </div>
     </div>
@@ -85,7 +79,7 @@
             <div class="product-name">Серьги «Черника»</div>
             <div class="product-desc">Ягоды черники с листиком</div>
             <div class="product-rating">
-              <span class="product-stars">★★★★★</span>
+              <span class="product-stars" role="img" aria-label="Рейтинг 4.9 из 5">★★★★★</span>
               <span class="product-rating-num">4.9</span>
               <span class="product-rating-count">(42)</span>
             </div>
@@ -110,7 +104,7 @@
             <div class="product-name">Подвеска «Малина»</div>
             <div class="product-desc">На шариковой цепочке</div>
             <div class="product-rating">
-              <span class="product-stars">★★★★★</span>
+              <span class="product-stars" role="img" aria-label="Рейтинг 5.0 из 5">★★★★★</span>
               <span class="product-rating-num">5.0</span>
               <span class="product-rating-count">(28)</span>
             </div>
@@ -133,7 +127,7 @@
             <div class="product-name">Подвеска «Морошка»</div>
             <div class="product-desc">Оранжево-красная ягода</div>
             <div class="product-rating">
-              <span class="product-stars">★★★★★</span>
+              <span class="product-stars" role="img" aria-label="Рейтинг 4.8 из 5">★★★★★</span>
               <span class="product-rating-num">4.8</span>
               <span class="product-rating-count">(19)</span>
             </div>
@@ -157,7 +151,7 @@
             <div class="product-name">Брошь «Мухомор»</div>
             <div class="product-desc">Миниатюрный мухомор</div>
             <div class="product-rating">
-              <span class="product-stars">★★★★☆</span>
+              <span class="product-stars" role="img" aria-label="Рейтинг 4.7 из 5">★★★★☆</span>
               <span class="product-rating-num">4.7</span>
               <span class="product-rating-count">(35)</span>
             </div>
@@ -170,7 +164,7 @@
       </div>
 
       <div class="products-more">
-        <a href="catalog.html" class="btn-secondary">Смотреть весь каталог →</a>
+        <a href="/catalog" class="btn-secondary">Смотреть весь каталог →</a>
       </div>
     </div>
   </section>
@@ -198,7 +192,7 @@
 
       <div class="reviews-grid">
         <div class="review-card">
-          <div class="review-stars">★★★★★</div>
+          <div class="review-stars" role="img" aria-label="Рейтинг 5 из 5">★★★★★</div>
           <div class="review-text">«Серёжки-черника просто невероятные! Такое ощущение, что это настоящие ягоды. Все подруги спрашивают где взяла.»</div>
           <div class="review-author">
             <div class="review-avatar">А</div>
@@ -209,7 +203,7 @@
           </div>
         </div>
         <div class="review-card">
-          <div class="review-stars">★★★★★</div>
+          <div class="review-stars" role="img" aria-label="Рейтинг 5 из 5">★★★★★</div>
           <div class="review-text">«Подвеска малина — шедевр! Качество отличное, цвет насыщенный, цепочка крепкая. Буду заказывать ещё!»</div>
           <div class="review-author">
             <div class="review-avatar">М</div>
@@ -220,7 +214,7 @@
           </div>
         </div>
         <div class="review-card">
-          <div class="review-stars">★★★★★</div>
+          <div class="review-stars" role="img" aria-label="Рейтинг 5 из 5">★★★★★</div>
           <div class="review-text">«Уже третий заказ. Каждое украшение — маленький шедевр. Упаковка тоже очень милая, как подарок себе.»</div>
           <div class="review-author">
             <div class="review-avatar">Е</div>
@@ -248,54 +242,4 @@
       <a href="#" class="cta-social">Яндекс.Маркет</a>
     </div>
   </section>
-
-  <!-- ═══ FOOTER ═══ -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <div class="footer-col-title">Навигация</div>
-          <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="about.html">Философия бренда</a></li>
-            <li><a href="reviews.html">Отзывы</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Маркетплейсы</div>
-          <ul>
-            <li><a href="#">Ozon</a></li>
-            <li><a href="#">Wildberries</a></li>
-            <li><a href="#">Яндекс.Маркет</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Связаться</div>
-          <ul>
-            <li><a href="#">Telegram</a></li>
-            <li><a href="#">VK</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Документы</div>
-          <ul>
-            <li><a href="#">Политика конфиденциальности</a></li>
-            <li><a href="#">Публичная оферта</a></li>
-            <li><a href="#">Реквизиты</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="footer-copy">&copy; 2026 SPEKTOR_V</div>
-        <div class="footer-legal">
-          <a href="#">Политика конфиденциальности</a>
-          <a href="#">Оферта</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/nav.js"></script>
-</body>
-</html>
+</BaseLayout>

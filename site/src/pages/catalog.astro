@@ -1,30 +1,13 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Каталог — SPEKTOR_V</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages/catalog.css">
-</head>
-<body>
-
-  <!-- ═══ NAV ═══ -->
-  <nav class="nav" id="mainNav">
-    <div class="nav-left">
-      <a href="index.html" class="nav-link">Главная</a>
-      <a href="catalog.html" class="nav-link active">Каталог</a>
-      <a href="about.html" class="nav-link">Философия бренда</a>
-      <a href="reviews.html" class="nav-link">Отзывы</a>
-    </div>
-    <a href="#contact" class="btn-contact">Связаться</a>
-  </nav>
-
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/pages/catalog.css';
+---
+<BaseLayout
+  title="Каталог украшений — SPEKTOR_V"
+  description="Более 300 украшений из полимерной глины: серьги, подвески, кольца, броши. Купить на Ozon, Wildberries, Яндекс.Маркет."
+  activePage="catalog"
+  darkInitial={false}
+>
   <!-- ═══ PAGE HEADER ═══ -->
   <div class="page-header">
     <div class="page-header-eyebrow">Каталог украшений</div>
@@ -35,14 +18,14 @@
   <!-- ═══ FILTERS ═══ -->
   <div class="filters-bar">
     <div class="filters-inner">
-      <button class="filter-chip active">Все</button>
-      <button class="filter-chip">Серьги</button>
-      <button class="filter-chip">Подвески</button>
-      <button class="filter-chip">Кольца</button>
-      <button class="filter-chip">Броши</button>
-      <button class="filter-chip">Наборы</button>
-      <button class="filter-chip">Хиты</button>
-      <button class="filter-chip">Новинки</button>
+      <button class="filter-chip active" data-filter-group="category">Все</button>
+      <button class="filter-chip" data-filter-group="category">Серьги</button>
+      <button class="filter-chip" data-filter-group="category">Подвески</button>
+      <button class="filter-chip" data-filter-group="category">Кольца</button>
+      <button class="filter-chip" data-filter-group="category">Броши</button>
+      <button class="filter-chip" data-filter-group="category">Наборы</button>
+      <button class="filter-chip" data-filter-group="category">Хиты</button>
+      <button class="filter-chip" data-filter-group="category">Новинки</button>
       <input type="text" class="filter-search" placeholder="Поиск по названию...">
     </div>
   </div>
@@ -59,7 +42,7 @@
           <div class="ozon-card-img">
             <span class="ozon-card-img-placeholder">Фото черники</span>
             <span class="ozon-card-badge badge-sale">−25%</span>
-            <button class="ozon-card-wishlist">♡</button>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
             <div class="ozon-card-dots">
               <div class="ozon-dot active"></div><div class="ozon-dot"></div><div class="ozon-dot"></div>
             </div>
@@ -71,7 +54,7 @@
             </div>
             <div class="ozon-card-title">Серьги «Черника» — ягоды с листиком, полимерная глина</div>
             <div class="ozon-card-rating">
-              <span class="ozon-stars">★★★★★</span>
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.9 из 5">★★★★★</span>
               <span class="ozon-rating-num">4.9</span>
               <span class="ozon-rating-count">· 42 отзыва</span>
             </div>
@@ -87,7 +70,7 @@
           <div class="ozon-card-img">
             <span class="ozon-card-img-placeholder">Фото малины</span>
             <span class="ozon-card-badge badge-hit">Хит</span>
-            <button class="ozon-card-wishlist">♡</button>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
             <div class="ozon-card-dots">
               <div class="ozon-dot active"></div><div class="ozon-dot"></div><div class="ozon-dot"></div><div class="ozon-dot"></div>
             </div>
@@ -98,7 +81,7 @@
             </div>
             <div class="ozon-card-title">Подвеска «Малина» на шариковой цепочке</div>
             <div class="ozon-card-rating">
-              <span class="ozon-stars">★★★★★</span>
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 5.0 из 5">★★★★★</span>
               <span class="ozon-rating-num">5.0</span>
               <span class="ozon-rating-count">· 28 отзывов</span>
             </div>
@@ -114,7 +97,7 @@
           <div class="ozon-card-img">
             <span class="ozon-card-img-placeholder">Фото морошки</span>
             <span class="ozon-card-badge badge-new">New</span>
-            <button class="ozon-card-wishlist">♡</button>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
             <div class="ozon-card-dots">
               <div class="ozon-dot active"></div><div class="ozon-dot"></div>
             </div>
@@ -125,7 +108,7 @@
             </div>
             <div class="ozon-card-title">Подвеска «Морошка» — оранжево-красная ягода</div>
             <div class="ozon-card-rating">
-              <span class="ozon-stars">★★★★★</span>
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.8 из 5">★★★★★</span>
               <span class="ozon-rating-num">4.8</span>
               <span class="ozon-rating-count">· 19 отзывов</span>
             </div>
@@ -140,7 +123,7 @@
         <div class="ozon-card">
           <div class="ozon-card-img">
             <span class="ozon-card-img-placeholder">Фото мухомора</span>
-            <button class="ozon-card-wishlist">♡</button>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
             <div class="ozon-card-dots">
               <div class="ozon-dot active"></div><div class="ozon-dot"></div><div class="ozon-dot"></div>
             </div>
@@ -151,7 +134,7 @@
             </div>
             <div class="ozon-card-title">Брошь «Мухомор» — миниатюрная, полимерная глина</div>
             <div class="ozon-card-rating">
-              <span class="ozon-stars">★★★★☆</span>
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.7 из 5">★★★★☆</span>
               <span class="ozon-rating-num">4.7</span>
               <span class="ozon-rating-count">· 35 отзывов</span>
             </div>
@@ -167,7 +150,7 @@
           <div class="ozon-card-img">
             <span class="ozon-card-img-placeholder">Фото клубники</span>
             <span class="ozon-card-badge badge-sale">−15%</span>
-            <button class="ozon-card-wishlist">♡</button>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
             <div class="ozon-card-dots">
               <div class="ozon-dot active"></div><div class="ozon-dot"></div><div class="ozon-dot"></div>
             </div>
@@ -179,7 +162,7 @@
             </div>
             <div class="ozon-card-title">Серьги «Клубника» — спелые ягоды с цветочком</div>
             <div class="ozon-card-rating">
-              <span class="ozon-stars">★★★★★</span>
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.9 из 5">★★★★★</span>
               <span class="ozon-rating-num">4.9</span>
               <span class="ozon-rating-count">· 31 отзыв</span>
             </div>
@@ -195,7 +178,7 @@
           <div class="ozon-card-img">
             <span class="ozon-card-img-placeholder">Фото лисичек</span>
             <span class="ozon-card-badge badge-hit">Хит</span>
-            <button class="ozon-card-wishlist">♡</button>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
             <div class="ozon-card-dots">
               <div class="ozon-dot active"></div><div class="ozon-dot"></div>
             </div>
@@ -206,7 +189,7 @@
             </div>
             <div class="ozon-card-title">Серьги «Лисички» — грибы на крючках из хирургической стали</div>
             <div class="ozon-card-rating">
-              <span class="ozon-stars">★★★★★</span>
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 5.0 из 5">★★★★★</span>
               <span class="ozon-rating-num">5.0</span>
               <span class="ozon-rating-count">· 56 отзывов</span>
             </div>
@@ -221,7 +204,7 @@
         <div class="ozon-card">
           <div class="ozon-card-img">
             <span class="ozon-card-img-placeholder">Фото ландыша</span>
-            <button class="ozon-card-wishlist">♡</button>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
             <div class="ozon-card-dots">
               <div class="ozon-dot active"></div><div class="ozon-dot"></div><div class="ozon-dot"></div>
             </div>
@@ -232,7 +215,7 @@
             </div>
             <div class="ozon-card-title">Подвеска «Ландыш» — веточка с колокольчиками</div>
             <div class="ozon-card-rating">
-              <span class="ozon-stars">★★★★★</span>
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.8 из 5">★★★★★</span>
               <span class="ozon-rating-num">4.8</span>
               <span class="ozon-rating-count">· 14 отзывов</span>
             </div>
@@ -248,7 +231,7 @@
           <div class="ozon-card-img">
             <span class="ozon-card-img-placeholder">Фото набора</span>
             <span class="ozon-card-badge badge-new">New</span>
-            <button class="ozon-card-wishlist">♡</button>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
             <div class="ozon-card-dots">
               <div class="ozon-dot active"></div><div class="ozon-dot"></div><div class="ozon-dot"></div><div class="ozon-dot"></div><div class="ozon-dot"></div>
             </div>
@@ -260,7 +243,7 @@
             </div>
             <div class="ozon-card-title">Набор «Лесная поляна» — серьги + подвеска + кольцо</div>
             <div class="ozon-card-rating">
-              <span class="ozon-stars">★★★★★</span>
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 5.0 из 5">★★★★★</span>
               <span class="ozon-rating-num">5.0</span>
               <span class="ozon-rating-count">· 8 отзывов</span>
             </div>
@@ -275,7 +258,7 @@
         <div class="ozon-card">
           <div class="ozon-card-img">
             <span class="ozon-card-img-placeholder">Фото подсолнуха</span>
-            <button class="ozon-card-wishlist">♡</button>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
             <div class="ozon-card-dots">
               <div class="ozon-dot active"></div><div class="ozon-dot"></div>
             </div>
@@ -286,7 +269,7 @@
             </div>
             <div class="ozon-card-title">Серьги «Подсолнух» — яркие, летние, лёгкие</div>
             <div class="ozon-card-rating">
-              <span class="ozon-stars">★★★★★</span>
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.9 из 5">★★★★★</span>
               <span class="ozon-rating-num">4.9</span>
               <span class="ozon-rating-count">· 22 отзыва</span>
             </div>
@@ -302,7 +285,7 @@
           <div class="ozon-card-img">
             <span class="ozon-card-img-placeholder">Фото ромашки</span>
             <span class="ozon-card-badge badge-sale">−20%</span>
-            <button class="ozon-card-wishlist">♡</button>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
             <div class="ozon-card-dots">
               <div class="ozon-dot active"></div><div class="ozon-dot"></div><div class="ozon-dot"></div>
             </div>
@@ -314,7 +297,7 @@
             </div>
             <div class="ozon-card-title">Кольцо «Ромашка» — нежный полевой цветок</div>
             <div class="ozon-card-rating">
-              <span class="ozon-stars">★★★★★</span>
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.8 из 5">★★★★★</span>
               <span class="ozon-rating-num">4.8</span>
               <span class="ozon-rating-count">· 17 отзывов</span>
             </div>
@@ -329,7 +312,7 @@
         <div class="ozon-card">
           <div class="ozon-card-img">
             <span class="ozon-card-img-placeholder">Фото брусники</span>
-            <button class="ozon-card-wishlist">♡</button>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
             <div class="ozon-card-dots">
               <div class="ozon-dot active"></div><div class="ozon-dot"></div>
             </div>
@@ -340,7 +323,7 @@
             </div>
             <div class="ozon-card-title">Серьги «Брусника» — россыпь красных ягод</div>
             <div class="ozon-card-rating">
-              <span class="ozon-stars">★★★★★</span>
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.9 из 5">★★★★★</span>
               <span class="ozon-rating-num">4.9</span>
               <span class="ozon-rating-count">· 26 отзывов</span>
             </div>
@@ -356,7 +339,7 @@
           <div class="ozon-card-img">
             <span class="ozon-card-img-placeholder">Фото белого гриба</span>
             <span class="ozon-card-badge badge-hit">Хит</span>
-            <button class="ozon-card-wishlist">♡</button>
+            <button class="ozon-card-wishlist" aria-label="Добавить в избранное">♡</button>
             <div class="ozon-card-dots">
               <div class="ozon-dot active"></div><div class="ozon-dot"></div><div class="ozon-dot"></div>
             </div>
@@ -367,7 +350,7 @@
             </div>
             <div class="ozon-card-title">Брошь «Белый гриб» — миниатюрный боровик</div>
             <div class="ozon-card-rating">
-              <span class="ozon-stars">★★★★★</span>
+              <span class="ozon-stars" role="img" aria-label="Рейтинг 4.9 из 5">★★★★★</span>
               <span class="ozon-rating-num">4.9</span>
               <span class="ozon-rating-count">· 41 отзыв</span>
             </div>
@@ -392,53 +375,5 @@
     </div>
   </section>
 
-  <!-- ═══ FOOTER ═══ -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <div class="footer-col-title">Навигация</div>
-          <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="about.html">Философия бренда</a></li>
-            <li><a href="reviews.html">Отзывы</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Маркетплейсы</div>
-          <ul>
-            <li><a href="#">Ozon</a></li>
-            <li><a href="#">Wildberries</a></li>
-            <li><a href="#">Яндекс.Маркет</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Связаться</div>
-          <ul>
-            <li><a href="#">Telegram</a></li>
-            <li><a href="#">VK</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Документы</div>
-          <ul>
-            <li><a href="#">Политика конфиденциальности</a></li>
-            <li><a href="#">Публичная оферта</a></li>
-            <li><a href="#">Реквизиты</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="footer-copy">&copy; 2026 SPEKTOR_V</div>
-        <div class="footer-legal">
-          <a href="#">Политика конфиденциальности</a>
-          <a href="#">Оферта</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/filters.js"></script>
-</body>
-</html>
+  <script src="../scripts/filters.js"></script>
+</BaseLayout>
